@@ -14,13 +14,11 @@
     flex: 1;
     display: flex;
     flex-direction: row;
-    border: 1px solid orange;
 }
 
 .gridElement {
     flex: 1;
     background-color: red;
-    border: 1px solid black;
 }
 
 .gridElement:hover {
