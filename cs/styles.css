@@ -30,6 +30,7 @@ form {
     flex-direction: row;
     flex-wrap: wrap;
     background-color: aqua;
+    overflow: hidden;
 }
 
 form input {
