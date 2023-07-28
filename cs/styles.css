@@ -18,11 +18,11 @@
 
 .gridElement {
     flex: 1;
-    background-color: red;
+    background-color: darkcyan;
 }
 
 .gridElement:hover {
-    background-color: black;
+    background-color: darkslategray;
 }
 
 form {
