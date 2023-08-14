@@ -55,9 +55,34 @@ form button {
     transition: padding 0.2s;
 }
 
-
 form button:hover {
     padding: 0 32px;
     border: 1px solid black;
     background-color: azure;
+}
+
+#buttonContainer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 8px;
+    gap: 16px;
+    justify-content: center;
+}
+
+.modButton {
+    font-size: 24px;
+    padding: 8px 24px;
+    color: white;
+    background: gray;
+    transition: padding 0.2s;
+    border: none;
+}
+
+.modButton:hover {
+    padding: 0 32px;
+    border: 1px solid black;
+}
+
+.active {
+    background: lightseagreen;
 }
