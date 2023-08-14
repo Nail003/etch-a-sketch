@@ -22,6 +22,10 @@ function submitHandler(e) {
             "color: orange;"
         );
         newGridSize = 16;
+
+        // Return mods button to normal as the new grid will not have any mods by default
+        rainbowModButton.classList.remove("active");
+        darkeningModButton.classList.remove("active");
     }
 
     clearGridContainer();
@@ -122,8 +126,40 @@ function rainbowModHandler(e) {
 }
 
 function darkeningModHandler(e) {
+    console.log("Darkening Mod");
+
+    let color = "100";
+
+    // Handle classes
     e.target.classList.toggle("active");
     rainbowModButton.classList.remove("active");
+
+    // Get gridElements to apply new styles
+    let gridElements = document.querySelectorAll(".gridElement");
+
+    // RemoveAllEventListener and get the new updated list
+    removeAllEventListener(gridElements);
+    gridElements = document.querySelectorAll(".gridElement");
+
+    // If active than deactivate
+    if (!e.target.classList.contains("active")) {
+        console.log("Deactivated");
+        return;
+    }
+
+    // Add event listeners
+    for (gridElement of gridElements) {
+        gridElement.addEventListener("mouseenter", (e) => {
+            e.target.style = `flex: 1; background: hsl(0, 0%, ${color}%);`;
+            if (color > 0) color -= 10;
+        });
+        gridElement.addEventListener("mouseleave", (e) => {
+            e.target.style = "none";
+        });
+    }
+
+    console.log("Activated");
+    logMessageSeparator();
 }
 
 function randomHexColorGenerator() {
