@@ -168,6 +168,7 @@ function randomHexColorGenerator() {
 }
 
 function removeAllEventListener(nodeList) {
+    // Please update all relevant nodes variable after using this function because of new clones
     for (node of nodeList) {
         node.replaceWith(node.cloneNode(true));
     }

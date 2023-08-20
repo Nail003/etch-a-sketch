@@ -2,4 +2,4 @@
 
 It is a sketching website that I'm currently making as one of my odin project.
 
-More details will be added as I go along.
+[Click here](https://nail003.github.io/etch-a-sketch) to visit the live preview.
